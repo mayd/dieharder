@@ -20,37 +20,12 @@
 #endif
 
 /*
- * Flags and variables to control all output formatting etc.  tflag_default
- * is set in set_globals to a default to be used if -T 0 is selected.
- * tflag is otherwise accumulated from a series of -T FLAG calls, where
- * flag can be either numerical or a field/control name.  table_separator
- * allows a user to pick their favorite field separator in the final output
- * table: a blank is easy to parse, a | is easy to read, a , is easy to
- * import into a spreadsheet (after filtering away e.g. # lines).  We make
- * blank the default because it is hard to specify a blank on the CL but
- * easy to specify the others?
- */
-EXTERN unsigned int tflag,tflag_default;
-EXTERN char table_separator;
-#include "output.h"
-
-/*
- * Variables to handle test selection.  parsecl can EITHER be fed a
- * test number OR a test name; we have to sort that out when we
- * choose a test.
- */
-EXTERN int dtest_num;
-EXTERN char dtest_name[128];
-EXTERN char generator_name[128];
-
-/*
  * user_template sources are here, not in library
  */
 #include "user_template.h"
 
 EXTERN double rng_avg_time_nsec, rng_rands_per_second;
 EXTERN int rng_double_rands_per_second;
-EXTERN double strategy;
 
 #ifdef RDIEHARDER
  EXTERN Test **rdh_testptr;		/* kludge: need a global to report back to R */

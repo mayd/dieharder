@@ -3,7 +3,7 @@
  * See copyright in copyright.h and the accompanying file COPYING
  *========================================================================
  */
-#define _OUTPUT_C
+
 #include "dieharder.h"
 
 #if defined(RDIEHARDER)

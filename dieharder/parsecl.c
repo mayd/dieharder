@@ -21,6 +21,28 @@
  * routines.
  */
 
+const char *const table_fields[] = {
+ "default",
+ "header",
+ "show_rng",
+ "line_header",
+ "test_name",
+ "ntuple",
+ "tsamples",
+ "psamples",
+ "pvalues",
+ "assessment",
+ "prefix",
+ "description",
+ "histogram",
+ "seed",
+ "rate",
+ "show_num",
+ "no_whitespace",
+ "dbl_rate",
+ "all"
+};
+
 char table_entry[TLENGTH];
 int show_flags = 0;
 

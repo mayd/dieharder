@@ -23,7 +23,7 @@ VERSION=@VERSION@
 bin_PROGRAMS = dieharder
 man1_MANS = dieharder.1
 EXTRA_DIST = $(man1_MANS)
-dieharder_LDADD = ../libdieharder/libdieharder.la -lm
+dieharder_LDADD = ../libdieharder/libdieharder.la -lgsl -lgslcblas -lm
 dieharder_SOURCES = \
 	add_ui_rngs.c \
 	add_ui_tests.c \
@@ -38,7 +38,6 @@ dieharder_SOURCES = \
 	parsecl.c \
 	run_all_tests.c \
 	run_test.c \
-	set_globals.c \
 	testbits.c \
 	time_rng.c \
 	user_template.c \

@@ -124,6 +124,7 @@ libdieharder_la_SOURCES = \
 	$(64BIT_RNGS) \
 	rng_XOR.c \
 	sample.c \
+	set_globals.c \
 	skein_block64.c \
 	skein_block_ref.c \
 	std_test.c \

@@ -63,8 +63,8 @@
 
 #include <dieharder/libdieharder.h>
 
-static int tflag=0;
-static double tcount[120];
+static int ttflag=0;
+static double ttcount[120];
 
 /*
 * kperm computes the permutation number of a vector of five integers
@@ -134,9 +134,9 @@ int diehard_operm5(Test **test, unsigned int irun)
   */
  for(i=0;i<120;i++) {
    count[i] = 0.0;
-   if(tflag == 0){
-     tcount[i] = 0.0;
-     tflag = 1;
+   if(ttflag == 0){
+     ttcount[i] = 0.0;
+     ttflag = 1;
    }
  }
 
@@ -175,8 +175,8 @@ int diehard_operm5(Test **test, unsigned int irun)
  }
 
  for(i=0;i<120;i++){
-   tcount[i] += count[i];
-   /* printf("%u: %f\n",i,tcount[i]); */
+   ttcount[i] += count[i];
+   /* printf("%u: %f\n",i,ttcount[i]); */
  }
 
  chisq = 0.0;

@@ -2,7 +2,8 @@
  * See copyright in copyright.h and the accompanying file COPYING
  */
 #define SET_GLOBALS_C
-#include "dieharder.h"
+//#include "dieharder.h"
+#include <dieharder/libdieharder.h>
 
 char gnames[GVECMAX][128];
 int gnumbs[GVECMAX];
@@ -46,6 +47,14 @@ unsigned int random_max;
 unsigned int rmax;
 unsigned int rmax_bits;
 unsigned int rmax_mask;
+
+int dtest_num;
+char dtest_name[128];
+char generator_name[128];
+char table_separator;
+unsigned int tflag,tflag_default;
+double strategy;
+
 
 void set_globals()
 {

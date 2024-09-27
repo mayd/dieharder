@@ -32,7 +32,14 @@
   */
 #define MAXTESTS 1000
 
-
+/*
+ * Variables to handle test selection.  parsecl can EITHER be fed a
+ * test number OR a test name; we have to sort that out when we
+ * choose a test.
+ */
+extern int dtest_num;
+extern char dtest_name[128];
+extern char generator_name[128];
 
 extern void dieharder_test_types();
 
